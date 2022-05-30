@@ -17,8 +17,7 @@ def NL(a,b):
     cont = 0
     for i in range(16):
         for j in range(16):
-            if SBox[i] == j:
-                if dot(to_binary(a,4),to_binary(i,4))^dot(to_binary(b,4),to_binary(j,4)) == 0:
+            if SBox[i] == j and dot(to_binary(a,4),to_binary(i,4))^dot(to_binary(b,4),to_binary(j,4)) == 0:
                     cont+=1
     return cont
 
